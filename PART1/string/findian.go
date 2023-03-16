@@ -11,23 +11,12 @@ The program should not be case-sensitive, so it does not matter if the character
 
 import(
 	"fmt"
-	"strings"
+	"strconv"
+	
 )
 
-func main(){
-	var data string
-	fmt.Print("Put the string:\n")
-	_,err := fmt.Scan(&data)
-
-	if(err != nil){fmt.Print("Some errors here:  ",  err)}
-
-	data = strings.ToLower(data)
-
-	if strings.Index(data,"i") == 0 && strings.Index(data,"a") != 0 && strings.HasSuffix(data,"n") {
-		fmt.Print("Found!")		
-	}else{
-		fmt.Print("Not Found!")
-
-	}
-
-}
+func main() {
+	i, _ := strconv.Atoi("10")
+	y := i * 2
+	fmt.Println(y)
+  }
